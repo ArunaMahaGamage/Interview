@@ -32,9 +32,12 @@ public class GridViewExampleActivity extends AppCompatActivity {
         gridView = (GridView) findViewById(R.id.gridView1);
         gridView.setAdapter(mAdapter);
 
+        // NumColumns
+        gridView.setNumColumns(2);
+        gridView.setColumnWidth(1);
+
         // Implement On Item click listener
-        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener()
-        {
+        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> arg0, View arg1, int position,
                                     long arg3) {
